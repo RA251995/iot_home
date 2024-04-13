@@ -49,7 +49,7 @@ void setup() {
     debugPrint("ThingSpeak write failed");
   }
 
-  ESP.deepSleep(60 * 60 * 1e6); /* Wait for 1 hour */
+  ESP.deepSleep(ESP.deepSleepMax()); /* Wait for max deep sleep time (~ 3.5 hours) */
 }
 
 void loop() {
